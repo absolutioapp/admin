@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Auth from "./components/Box/Box.tsx";
 
 const App = (): React.ReactElement => {
   const [test, setTest] = useState<string>("test");
@@ -6,6 +7,7 @@ const App = (): React.ReactElement => {
   return (
     <>
       <h1 className="text-2xl bg-amber-700">Hello, {test}</h1>
+        <Auth />
     </>
   );
 };

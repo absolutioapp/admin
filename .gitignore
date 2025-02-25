@@ -26,3 +26,5 @@ dist-ssr
 .history
 node_modules
 package-lock.json
+
+.env.local
