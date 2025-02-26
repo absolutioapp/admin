@@ -44,7 +44,7 @@
 }
 
 @layer components {
-    h1, h2, h3, h4, h5, p, button, label {
+    h1, h2, h3, h4, h5, p, button, label, span {
         font-family: var(--font-pjs);
     }
 }
