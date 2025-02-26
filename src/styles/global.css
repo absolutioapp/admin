@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Plus Jakarta;
+    src: url("../assets/fonts/Plus_Jakarta_Sans.ttf");
+}
+
+@font-face {
+    font-family: Plus Jakarta Italy;
+    src: url("../assets/fonts/Plus_Jakarta_Sans_Itl.ttf");
+}
+
+@theme {
+
+    --color-primary-30: rgba(126, 217, 199, 0.3);
+    --color-primary-60: rgba(126, 217, 199, 0.6);
+    --color-primary-90: rgba(126, 217, 199, 0.9);
+    --color-primary-100: rgba(126, 217, 199, 1);
+
+    --color-secondary-30: rgba(217, 232, 117, 0.3);
+    --color-secondary-60: rgba(217, 232, 117, 0.6);
+    --color-secondary-90: rgba(217, 232, 117, 0.9);
+    --color-secondary-100: rgba(217, 232, 117, 1);
+
+    --color-accent-30: rgba(163, 210, 158, 0.3);
+    --color-accent-60: rgba(163, 210, 158, 0.6);
+    --color-accent-90: rgba(163, 210, 158, 0.9);
+    --color-accent-100: rgba(163, 210, 158, 1);
+
+
+    --color-background-30: rgba(248, 249, 243, 0.3);
+    --color-background-60: rgba(248, 249, 243, 0.6);
+    --color-background-90: rgba(248, 249, 243, 0.9);
+    --color-background-100: rgba(248, 249, 243, 1);
+
+
+    --color-text-30: rgba(51, 51, 51, 0.3);
+    --color-text-60: rgba(51, 51, 51, 0.6);
+    --color-text-90: rgba(51, 51, 51, 0.9);
+    --color-text-100: rgba(51, 51, 51, 1);
+
+    --font-pjs: Plus Jakarta, "sans-serif";
+    --font-pjs-it: Plus Jakarta Italy, "sans-serif";
+}
+
+@layer components {
+    h1, h2, h3, h4, h5, p, button, label {
+        font-family: var(--font-pjs);
+    }
+}

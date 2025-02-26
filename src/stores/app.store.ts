@@ -1,15 +1,21 @@
-import { create } from 'zustand';
+import {create} from "zustand";
 
-interface AuthState {
-    accessToken: string | null;
-    refreshToken: string | null;
-    setTokens: (accessToken: string, refreshToken: string) => void;
-    clearTokens: () => void;
+enum Pages {
+    Home, Dashboard,
 }
 
-export const useAuthStore = create<AuthState>((set) => ({
-    accessToken: null,
-    refreshToken: null,
-    setTokens: (accessToken, refreshToken) => set({ accessToken, refreshToken }),
-    clearTokens: () => set({ accessToken: null, refreshToken: null }),
-}));
+interface AppState {
+    isDarkMode: boolean;
+    toggleDarkMode: () => void;
+    page: Pages
+    setPage: (page: Pages) => void;
+}
+
+export const useAppStore = create<AppState>((set) => ({
+  isDarkMode: false,
+  page: Pages.Home,
+  setPage: (page) => set({page}),
+  toggleDarkMode: () => set((state) => ({isDarkMode: !state.isDarkMode}))}));
+
+
+export {Pages};

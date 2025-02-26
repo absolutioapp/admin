@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Auth from "./components/Box/Box.tsx";
+import { useAppStore, Pages } from "./stores/app.store.ts";
 
 const App = (): React.ReactElement => {
-  const [test, setTest] = useState<string>("test");
+
+  const {page} = useAppStore();
 
   return (
     <>
-      <h1 className="text-2xl bg-amber-700">Hello, {test}</h1>
-        <Auth />
+      {page === Pages.Home && <Auth />}
     </>
   );
 };
