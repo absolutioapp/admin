@@ -1,15 +1,19 @@
 import React from "react";
-import Auth from "./components/Box/Box.tsx";
+import Auth from "./components/Auth/Auth.tsx";
 import { useAppStore, Pages } from "./stores/app.store.ts";
+import EventWrapper from "./utils/EventWrapper/EventWrapper.tsx";
+import Dashboard from "./pages/Dashboard/Dashboard.tsx";
 
 const App = (): React.ReactElement => {
-
-  const {page} = useAppStore();
+  const { page } = useAppStore();
 
   return (
-    <>
-      {page === Pages.Home && <Auth />}
-    </>
+    <EventWrapper>
+      <>
+        {page === Pages.Home && <Auth />}
+        {page === Pages.Dashboard && <Dashboard />}
+      </>
+    </EventWrapper>
   );
 };
 
