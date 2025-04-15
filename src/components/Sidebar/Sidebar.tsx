@@ -38,8 +38,8 @@ const Sidebar = () => {
   const menuItems = useMemo(
     () => [
       { icon: <Home size={24} />, label: "Dashboard" },
-      { icon: <User size={24} />, label: "User" },
-      { icon: <Images size={24} />, label: "Images Editor" },
+      { icon: <User size={24} />, label: "User Editor" },
+      { icon: <Images size={24} />, label: "Image Editor" },
 
       { icon: <Settings size={24} />, label: "Settings" },
     ],

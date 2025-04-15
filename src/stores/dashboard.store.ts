@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 enum Chapters {
   Dashboard,
-  Users,
+  User_Editor,
   Image_Editor,
   Settings,
 }
